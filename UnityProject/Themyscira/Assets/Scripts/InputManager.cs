@@ -27,7 +27,7 @@ public class InputManager : MonoBehaviour {
 
 	void Update () {
 		if (mode == Mode.Navigation) {
-			//Do navigation mechanics
+			// processing done in PlayerMovement::Update
 			}
 		else if (mode == Mode.Puzzle) {
 			//Do puzzle mechanics
