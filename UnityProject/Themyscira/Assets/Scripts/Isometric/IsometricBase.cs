@@ -9,7 +9,7 @@ public class IsometricBase : MonoBehaviour {
 
     Sprite sprite;
 
-    static float isoAngle = 45;
+    //static float isoAngle = 45;
 
     // Use this for initialization
     void Start () {
@@ -23,7 +23,9 @@ public class IsometricBase : MonoBehaviour {
 
     void SetZ()
     {
-        
+        // todo: use tangent of isoAngle instead?
+        Vector3 pos = gameObject.transform.position;
+        gameObject.transform.position.Set(pos.x, pos.y, GetFloor());
     }
 
     private float GetFloor()
