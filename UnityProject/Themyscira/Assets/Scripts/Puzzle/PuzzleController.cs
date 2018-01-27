@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PuzzleController : MonoBehaviour {
 
 	Solution solution;
+	List<PuzzleSquare> squares = new List<PuzzleSquare>();
 
 	public Puzzle puzzle;
 
@@ -37,6 +38,17 @@ public class PuzzleController : MonoBehaviour {
 			square.GetComponentInChildren<Text>().text = words[i];
 			square.name = words[i] + " square";
 			square.transform.SetParent(puzzlePanel);
+			puzzlePanel.GetComponent<PuzzlePanel>().UpdateSquareHomes();
 		}
+	}
+
+	public void TestPuzzleSolution() {
+		foreach (PuzzleSquare square in squares) {
+			if (square.isGoingHome) {
+				return; //Someone's still traveling, not ready yet
+			} 
+		}
+
+		attemptPanel.GetComponent<PuzzlePanel>().TestPuzzleSolution(solution);
 	}
 }

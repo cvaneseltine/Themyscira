@@ -9,12 +9,14 @@ public class UsefulCanvas : MonoBehaviour {
 	PointerEventData m_PointerEventData;
 	EventSystem m_EventSystem;
 
-	void Start() {
+	protected void PrepRaycaster () { //***THIS MUST BE CALLED IN CHILD CLASS START
+		//Fetch the Raycaster from the GameObject (the Canvas)
 		m_Raycaster = GetComponent<GraphicRaycaster>();
+		//Fetch the Event System from the Scene
 		m_EventSystem = GetComponent<EventSystem>();
 	}
 
-	List<GameObject> GetAllObjectsUnderMouse () {
+	protected List<GameObject> GetAllObjectsUnderMouse () {
 		List<RaycastResult> raycastResults = new List<RaycastResult>();
 		List<GameObject> results = new List<GameObject>();
 
@@ -27,17 +29,21 @@ public class UsefulCanvas : MonoBehaviour {
 		return results;
 	}
 
-	T GetObjectUnderMouse<T>() {
+	protected T GetObjectUnderMouse<T>() {
+		//Define the kind of object you want based on its pointer.
+
 		m_PointerEventData = new PointerEventData(m_EventSystem);
 		m_PointerEventData.position = Input.mousePosition;
-
-		//Create a list of Raycast Results
+		
 		List<RaycastResult> results = new List<RaycastResult>();
 
-		//Raycast using the Graphics Raycaster and mouse click position
 		m_Raycaster.Raycast(m_PointerEventData, results);
-
-
+		
+		foreach (RaycastResult result in results) {
+			if (result.gameObject.GetComponent<T>() != null) {
+				return result.gameObject.GetComponent<T>();
+			}
+		}
 		return default(T);
 	}
 }

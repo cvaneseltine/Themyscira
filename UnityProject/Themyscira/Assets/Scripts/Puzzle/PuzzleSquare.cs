@@ -4,18 +4,56 @@ using UnityEngine;
 
 public class PuzzleSquare : MonoBehaviour {
 
-	public bool isFollowingMouse = false;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+	float lerpTime = 1f;
+	float currentLerpTime;
+	Vector3 lerpStart;
 	
-	// Update is called once per frame
+	public Vector3 home;
+
+	public bool isFollowingMouse = false;
+	public bool isGoingHome = false;
+	
+	
 	void Update () {
 		if (isFollowingMouse) {
-			//Debug.Log("I'm " + name + " and I wanna follow the mouse! We're going to " + Input.mousePosition + "!");
 			transform.position = Input.mousePosition;
 		}
+		else if (isGoingHome) {
+			//Are we there yet?
+			if (Mathf.Approximately (transform.position.x, home.x) && Mathf.Approximately(transform.position.y, home.y)) {
+				isGoingHome = false;
+				PuzzleController.Instance.TestPuzzleSolution();
+				Debug.Log(name + " here, and I have gotten to my new home. Did we win?");
+			}
+			else {  //If not, head in that direction.
+					//increment timer once per frame
+				currentLerpTime += Time.deltaTime;
+				if (currentLerpTime > lerpTime) {
+					currentLerpTime = lerpTime;
+				}
+
+				//lerp!
+				float perc = currentLerpTime / lerpTime;
+				transform.position = Vector3.Lerp(lerpStart, home, perc);
+			}
+		}
+	}
+
+	public void StartFollowingMouse () {
+		Debug.Log(name + " here, following the mouse.");
+		isGoingHome = false;
+		isFollowingMouse = true;
+	}
+
+	public void ChangeHome (Vector3 newHome) {
+		home = newHome;
+	}
+
+	public void GoHome () {
+		Debug.Log(name + " here, and I'm going home.");
+		isFollowingMouse = false;
+		isGoingHome = true;
+		lerpStart = transform.position;
+		currentLerpTime = 0;
 	}
 }
