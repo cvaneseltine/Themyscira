@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class IsometricBase : MonoBehaviour {
+public abstract class IsometricBase : MonoBehaviour {
 
     public float floorHeight = 0;
 
@@ -28,7 +28,10 @@ public class IsometricBase : MonoBehaviour {
     {
         // todo: use tangent of isoAngle instead?
         Vector3 pos = gameObject.transform.position;
-        gameObject.transform.position.Set(pos.x, pos.y, GetFloor());
+        Quaternion rot = gameObject.transform.rotation;
+        Debug.Log(gameObject.name + GetFloor());
+        gameObject.transform.SetPositionAndRotation(new Vector3(pos.x, pos.y, GetFloor()), rot);
+        Debug.Log("     z: " + gameObject.transform.position.z);
     }
 
     private float GetFloor()
@@ -42,12 +45,11 @@ public class IsometricBase : MonoBehaviour {
         // draw line to denote floor
         Gizmos.color = Color.cyan;
         float lineY = GetFloor();
-        float lineLength = sprite.bounds.size.x / 2;
+        float lineLength = sprite.bounds.size.x;
         float lineX1 = gameObject.transform.position.x - lineLength / 2;
         float lineX2 = gameObject.transform.position.x + lineLength / 2;
         Vector3 lineStart = new Vector3(lineX1, lineY, gameObject.transform.position.z);
         Vector3 lineEnd = new Vector3(lineX2, lineY, gameObject.transform.position.z);
-        Debug.Log(lineStart.ToString() + " -> " + lineEnd.ToString());
         Gizmos.DrawLine(lineStart, lineEnd);
     }
 }

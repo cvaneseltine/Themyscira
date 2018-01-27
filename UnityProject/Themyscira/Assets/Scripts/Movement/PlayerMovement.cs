@@ -23,15 +23,24 @@ public class PlayerMovement : MonoBehaviour
     {
         // hack - update to use inputmanager
         int[] directions = new int[4];
-        directions[NORTH] = Input.GetKey("W") ? 1 : 0;
-        directions[SOUTH] = Input.GetKey("S") ? 1 : 0;
-        directions[EAST] = Input.GetKey("D") ? 1 : 0;
-        directions[WEST] = Input.GetKey("A") ? 1 : 0;
+        directions[NORTH] = Input.GetKey(KeyCode.W) ? 1 : 0;
+        directions[SOUTH] = Input.GetKey(KeyCode.S) ? 1 : 0;
+        directions[EAST] = Input.GetKey(KeyCode.D) ? 1 : 0;
+        directions[WEST] = Input.GetKey(KeyCode.A) ? 1 : 0;
+
+        //Debug.Log("[" + directions[NORTH] + "," + directions[SOUTH] + ","
+        //          + directions[EAST] + "," + directions[WEST] + "]");
 
         // oh god fix these names
         // swap subtraction if going backwards
-        Vector2 direction = new Vector2(directions[NORTH] - directions[SOUTH],
-                                        directions[EAST] - directions[WEST]).normalized;
-        direction.Scale(speed * Time.deltaTime);
+        Vector2 direction = new Vector2(directions[EAST] - directions[WEST],
+                                        directions[NORTH] - directions[SOUTH]);
+
+        //Debug.Log("dir: " + direction.normalized);
+        //Debug.Log("mag: " + speed * Time.deltaTime);
+
+        Vector2 movement = direction.normalized * speed * Time.deltaTime;
+        //Debug.Log("mov: " + movement);
+        gameObject.transform.Translate(movement);
     }
 }
