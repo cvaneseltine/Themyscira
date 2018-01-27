@@ -23,14 +23,8 @@ public class IsometricBase : MonoBehaviour {
     {
         Init();   
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
-    void SetZ()
+    protected void SetZ()
     {
         // todo: use tangent of isoAngle instead?
         Vector3 pos = gameObject.transform.position;
@@ -48,7 +42,7 @@ public class IsometricBase : MonoBehaviour {
         // draw line to denote floor
         Gizmos.color = Color.cyan;
         float lineY = GetFloor();
-        float lineLength = 2 * sprite.bounds.size.x / 3;
+        float lineLength = sprite.bounds.size.x / 2;
         float lineX1 = gameObject.transform.position.x - lineLength / 2;
         float lineX2 = gameObject.transform.position.x + lineLength / 2;
         Vector3 lineStart = new Vector3(lineX1, lineY, gameObject.transform.position.z);
