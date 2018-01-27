@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Globals : MonoBehaviour {
+public class Constants : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
