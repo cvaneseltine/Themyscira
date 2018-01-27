@@ -1,22 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PuzzleController : MonoBehaviour {
 
-	PuzzleController singleton;
+	Solution solution;
 
-	public Puzzle CurrentPuzzle;
+	public Puzzle puzzle;
 
-	public PuzzleController Instance {
+	public RectTransform puzzlePanel;
+	public RectTransform attemptPanel;
+
+	public Transform squarePrefab;
+
+	static PuzzleController singleton;
+
+	static public PuzzleController Instance {
 		get {
-			if (singleton == null) {
-				singleton = this;
-			}
-			return this;
+			return singleton;
 		}
 	}
 
+	void Start () {
+		if (singleton == null) {
+			singleton = this;
+		}
+	}
 
+	public void SetUpPuzzle () {
+		solution = puzzle.solution;
+		List<string> words = puzzle.ScrambleWords();
 
+		for (int i = 0; i < words.Count; i++) {
+			PuzzleSquare square = Instantiate(squarePrefab).GetComponent<PuzzleSquare>();
+			square.GetComponentInChildren<Text>().text = words[i];
+			square.transform.SetParent(puzzlePanel);
+		}
+	}
 }
