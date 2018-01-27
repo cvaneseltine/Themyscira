@@ -9,6 +9,7 @@ public class CarolynTestController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (nowDoTheThing) {
+			InputManager.Instance.mode = InputManager.Mode.Puzzle;
 			PuzzleController.Instance.SetUpPuzzle();
 			nowDoTheThing = false;
 		}		

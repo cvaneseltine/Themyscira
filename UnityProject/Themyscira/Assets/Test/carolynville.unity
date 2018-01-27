@@ -298,7 +298,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 976640371}
-  - component: {fileID: 976640370}
   - component: {fileID: 976640372}
   m_Layer: 0
   m_Name: PuzzleController
@@ -307,21 +306,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &976640370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 976640369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5c5418c7c9c3b2419fecc083ab56702, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzle: {fileID: 0}
-  puzzlePanel: {fileID: 0}
-  attemptPanel: {fileID: 0}
-  squarePrefab: {fileID: 0}
 --- !u!4 &976640371
 Transform:
   m_ObjectHideFlags: 0
@@ -445,6 +429,7 @@ GameObject:
   - component: {fileID: 1513087596}
   - component: {fileID: 1513087595}
   - component: {fileID: 1513087594}
+  - component: {fileID: 1513087597}
   m_Layer: 5
   m_Name: Puzzle Canvas
   m_TagString: Untagged
@@ -525,10 +510,21 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1513087597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1513087592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140e4655b91938f49b123221df28aec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1533011787
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +638,7 @@ GameObject:
   - component: {fileID: 1982051685}
   - component: {fileID: 1982051687}
   - component: {fileID: 1982051686}
+  - component: {fileID: 1982051688}
   m_Layer: 5
   m_Name: Attempt Panel
   m_TagString: Untagged
@@ -700,6 +697,28 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1982051684}
+--- !u!114 &1982051688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1982051684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -405508275, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 1
 --- !u!1 &2089065212
 GameObject:
   m_ObjectHideFlags: 0

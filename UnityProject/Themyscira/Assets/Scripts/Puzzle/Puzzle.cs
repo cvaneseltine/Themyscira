@@ -8,11 +8,8 @@ public class Puzzle : MonoBehaviour {
 
 	public List<string> ScrambleWords () {
 		List<string> words = new List<string>();
-
 		words.AddRange(solution.wordStrings);
 
-		words.OrderBy(a => Random.Range(0, 100));
-
-		return words;
+		return Randomizer.RandomizeList<string>(words);
 	}
 }

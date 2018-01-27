@@ -11,15 +11,27 @@ public class InputManager : MonoBehaviour {
 
 	public Mode mode;
 
-	void Update () {
-		if (Input.GetMouseButtonDown(0)) {
-			if (mode == Mode.Navigation) {
-				//Do navigation mechanics
-				}
-			else if (mode == Mode.Puzzle) {
-				//Do puzzle mechanics
+	static InputManager singleton;
 
+	static public InputManager Instance {
+		get {
+			return singleton;
+		}
+	}
+
+	void Start() {
+		if (singleton == null) {
+			singleton = this;
+		}
+	}
+
+	void Update () {
+		if (mode == Mode.Navigation) {
+			//Do navigation mechanics
 			}
+		else if (mode == Mode.Puzzle) {
+			//Do puzzle mechanics
+			PuzzleCanvas.Instance.ProcessInput();
 		}
 	}
 }

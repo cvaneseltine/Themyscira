@@ -35,6 +35,7 @@ public class PuzzleController : MonoBehaviour {
 		for (int i = 0; i < words.Count; i++) {
 			PuzzleSquare square = Instantiate(squarePrefab).GetComponent<PuzzleSquare>();
 			square.GetComponentInChildren<Text>().text = words[i];
+			square.name = words[i] + " square";
 			square.transform.SetParent(puzzlePanel);
 		}
 	}
