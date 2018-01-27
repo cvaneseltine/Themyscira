@@ -29,12 +29,12 @@ public abstract class IsometricBase : MonoBehaviour {
         // todo: use tangent of isoAngle instead?
         Vector3 pos = gameObject.transform.position;
         Quaternion rot = gameObject.transform.rotation;
-        Debug.Log(gameObject.name + GetFloor());
+        //Debug.Log(gameObject.name + GetFloor());
         gameObject.transform.SetPositionAndRotation(new Vector3(pos.x, pos.y, GetFloor()), rot);
-        Debug.Log("     z: " + gameObject.transform.position.z);
+        //Debug.Log("     z: " + gameObject.transform.position.z);
     }
 
-    private float GetFloor()
+    public float GetFloor()
     {
         return gameObject.transform.position.y + floorHeight;
     }

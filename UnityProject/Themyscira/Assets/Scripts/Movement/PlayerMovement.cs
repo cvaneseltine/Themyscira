@@ -54,5 +54,8 @@ public class PlayerMovement : MonoBehaviour
 
         //Debug.Log("mov: " + currentVelocity);
         rigidbody.AddForce(force);
+
+        // leaning?
+        //gameObject.transform.RotateAround(new Vector3(0, GetComponent<IsometricBase>().GetFloor(), 0), Vector3.forward, -rigidbody.velocity.x * 3 * Time.deltaTime);
     }
 }
