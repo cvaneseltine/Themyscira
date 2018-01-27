@@ -41,7 +41,7 @@ public class PuzzlePanel : MonoBehaviour {
 		}
 	}
 
-	public void TestPuzzleSolution (Solution solution) {
+	public bool TestPuzzleSolution (Solution solution) {
 		List<PuzzleSquare> squares = new List<PuzzleSquare>();
 
 		foreach (Transform child in transform) {
@@ -51,9 +51,8 @@ public class PuzzlePanel : MonoBehaviour {
 		}
 
 		if (squares.Count != solution.wordStrings.Length) {
-			Debug.Log("Sorry, square, but your solution requires another arrangement. ("
-						+ squares.Count + " squares in place versus " + solution.wordStrings.Length + " needed)");
-			return;
+			//Debug.Log("Sorry, square, but your solution requires another arrangement. (" + squares.Count + " squares in place versus " + solution.wordStrings.Length + " needed)");
+			return false;
 		}
 
 		squares = squares.OrderBy(a => a.transform.position.x).ToList<PuzzleSquare>();
@@ -62,12 +61,11 @@ public class PuzzlePanel : MonoBehaviour {
 			PuzzleSquare square = squares[i];
 
 			if (!square.GetComponentInChildren<Text>().text.Equals(solution.wordStrings[i])) {
-				Debug.Log("Sorry, square, but your solution requires another arrangement. ("
-						+ square.GetComponentInChildren<Text>().text + " does not match " + solution.wordStrings[i] + " needed)");
-				return;
+				//Debug.Log("Sorry, square, but your solution requires another arrangement. (" + square.GetComponentInChildren<Text>().text + " does not match " + solution.wordStrings[i] + " needed)");
+				return false;
 			}
 		}
-
 		Debug.Log("CONGRATULATIONS! You have solved the puzzle!");
+		return true;
 	}
 }

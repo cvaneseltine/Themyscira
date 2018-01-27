@@ -29,7 +29,8 @@ public class PuzzleController : MonoBehaviour {
 		}
 	}
 
-	public void SetUpPuzzle () {
+	public void SetUpPuzzle (Puzzle nextPuzzle) {
+		puzzle = nextPuzzle;
 		solution = puzzle.solution;
 		List<string> words = puzzle.ScrambleWords();
 
@@ -40,15 +41,21 @@ public class PuzzleController : MonoBehaviour {
 			square.transform.SetParent(puzzlePanel);
 			puzzlePanel.GetComponent<PuzzlePanel>().UpdateSquareHomes();
 		}
+
+		InputManager.Instance.mode = InputManager.Mode.Puzzle; 
 	}
 
 	public void TestPuzzleSolution() {
 		foreach (PuzzleSquare square in squares) {
 			if (square.isGoingHome) {
-				return; //Someone's still traveling, not ready yet
+				return; //A square's still traveling, not ready yet
 			} 
 		}
-
-		attemptPanel.GetComponent<PuzzlePanel>().TestPuzzleSolution(solution);
+		
+		if (attemptPanel.GetComponent<PuzzlePanel>().TestPuzzleSolution(solution)) { //You did it!
+			//Hooray, good job, make it splashy!
+			gameObject.SetActive(false);
+			InputManager.Instance.mode = InputManager.Mode.Navigation;
+		}
 	}
 }
