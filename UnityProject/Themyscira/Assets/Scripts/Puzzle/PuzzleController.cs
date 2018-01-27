@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class PuzzleController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+	PuzzleController singleton;
+
+	public Puzzle CurrentPuzzle;
+
+	public PuzzleController Instance {
+		get {
+			if (singleton == null) {
+				singleton = this;
+			}
+			return this;
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+
+
 }
