@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
 
     public float movementForce = 100;
 
+    public SpriteRenderer leftSprite;
+    public SpriteRenderer rightSprite;
+
     private Rigidbody2D rigidbody;
 
     // oh my god make it an enum
@@ -49,6 +52,17 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log("mag: " + speed * Time.deltaTime);
 
         Vector2 force = inputDirection.normalized * movementForce * Time.deltaTime;
+
+        if (inputDirection.normalized.x < 0)
+        {
+            leftSprite.gameObject.SetActive(true);
+            rightSprite.gameObject.SetActive(false);
+        }
+        else
+        {
+            leftSprite.gameObject.SetActive(false);
+            rightSprite.gameObject.SetActive(true);
+        }
 
         //currentVelocity = (currentVelocity + desiredVelocity).normalized * maxSpeed * Time.deltaTime;
 
