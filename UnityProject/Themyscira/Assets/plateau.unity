@@ -303,7 +303,7 @@ MonoBehaviour:
     height: 225
   numRadioTowersToSpawn: 5
   minDistanceBetweenTowers: 150
-  numSceneryBitsToSpawn: 200
+  numSceneryBitsToSpawn: 300
   minDistanceBetweenBits: 10
   radioTower: {fileID: 4486873570026400, guid: 1dcdb043278a7bc4c92cd1ba01fa1d88, type: 2}
   scenery:
