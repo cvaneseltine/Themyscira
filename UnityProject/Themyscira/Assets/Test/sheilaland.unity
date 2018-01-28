@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 60446670}
   - component: {fileID: 60446669}
   - component: {fileID: 60446671}
+  - component: {fileID: 60446672}
   m_Layer: 0
   m_Name: globals
   m_TagString: Untagged
@@ -180,6 +181,17 @@ MonoBehaviour:
   scenery:
   - {fileID: 4331757911085116, guid: 65ea3ba03af5cc04b935a398ddaa9b99, type: 2}
   - {fileID: 4403463041342180, guid: 93253da005448274a92c2846986d7124, type: 2}
+--- !u!114 &60446672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 60446668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30965e03397bdf84e926c4df9229743d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &354875954
 Prefab:
   m_ObjectHideFlags: 0

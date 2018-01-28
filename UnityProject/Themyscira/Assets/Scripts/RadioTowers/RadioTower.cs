@@ -19,11 +19,7 @@ public class RadioTower : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         SetState(State.Inactive);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        TowerManager.Instance.RegisterTower(this);
 	}
 
     public void SetState(State newState)
@@ -34,5 +30,14 @@ public class RadioTower : MonoBehaviour {
         hoverThing.SetActive(state == State.Broadcasting);
         activeSprite.gameObject.SetActive(state == State.Broadcasting || state == State.Solved);
         inactiveSprite.gameObject.SetActive(state == State.Inactive);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (state == State.Broadcasting)
+        {
+            // TODO: launch puzzle here, then call this after it's solved
+            TowerManager.Instance.FinishCurrentTower();
+        }
     }
 }
