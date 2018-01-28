@@ -8,11 +8,17 @@ public class RadioTower : MonoBehaviour {
     public SpriteRenderer inactiveSprite;
     public SpriteRenderer activeSprite;
 
-    private bool isActive = true;
+    public enum State
+    {
+        Inactive,
+        Broadcasting,
+        Solved
+    }
+    private State state;
 
 	// Use this for initialization
 	void Start () {
-        SetActive(false);
+        SetState(State.Inactive);
 	}
 	
 	// Update is called once per frame
@@ -20,13 +26,13 @@ public class RadioTower : MonoBehaviour {
 		
 	}
 
-    public void SetActive(bool active)
+    public void SetState(State newState)
     {
-        isActive = active;
+        state = newState;
 
         // i think this works??
-        hoverThing.SetActive(isActive);
-        activeSprite.gameObject.SetActive(isActive);
-        inactiveSprite.gameObject.SetActive(!isActive);
+        hoverThing.SetActive(state == State.Broadcasting);
+        activeSprite.gameObject.SetActive(state == State.Broadcasting || state == State.Solved);
+        inactiveSprite.gameObject.SetActive(state == State.Inactive);
     }
 }
