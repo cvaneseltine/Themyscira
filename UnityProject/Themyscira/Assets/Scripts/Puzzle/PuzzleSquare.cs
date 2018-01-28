@@ -12,7 +12,8 @@ public class PuzzleSquare : MonoBehaviour {
 
 	public bool isFollowingMouse = false;
 	public bool isGoingHome = false;
-	
+
+	public string translation;
 	
 	void Update () {
 		if (isFollowingMouse) {
@@ -23,7 +24,7 @@ public class PuzzleSquare : MonoBehaviour {
 			if (Mathf.Approximately (transform.position.x, home.x) && Mathf.Approximately(transform.position.y, home.y)) {
 				isGoingHome = false;
 				PuzzleController.Instance.TestPuzzleSolution();
-				Debug.Log(name + " here, and I have gotten to my new home. Did we win?");
+				//Debug.Log(name + " here, and I have gotten to my new home. Did we win?");
 			}
 			else {  //If not, head in that direction.
 					//increment timer once per frame
@@ -40,7 +41,7 @@ public class PuzzleSquare : MonoBehaviour {
 	}
 
 	public void StartFollowingMouse () {
-		Debug.Log(name + " here, following the mouse.");
+		//Debug.Log(name + " here, following the mouse.");
 		isGoingHome = false;
 		isFollowingMouse = true;
 	}
@@ -50,7 +51,7 @@ public class PuzzleSquare : MonoBehaviour {
 	}
 
 	public void GoHome () {
-		Debug.Log(name + " here, and I'm going home.");
+		//Debug.Log(name + " here, and I'm going home.");
 		isFollowingMouse = false;
 		isGoingHome = true;
 		lerpStart = transform.position;

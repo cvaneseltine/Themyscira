@@ -9,8 +9,12 @@ public class CarolynTestController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (nowDoTheThing) {
-
+			//StorylineManager.Instance.AdvanceStory();
 			nowDoTheThing = false;
+		}
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			StorylineManager.Instance.AdvanceStory();
+			//PuzzleController.Instance.TranslateSquares();
 		}		
 	}
 }

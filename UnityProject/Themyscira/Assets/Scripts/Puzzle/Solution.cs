@@ -4,4 +4,5 @@ using UnityEngine;
 
 public class Solution : MonoBehaviour {
 	public string[] wordStrings;
+	public string[] translationStrings;
 }

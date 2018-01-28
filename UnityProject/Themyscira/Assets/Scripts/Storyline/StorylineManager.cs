@@ -6,7 +6,7 @@ using System.Linq;
 public class StorylineManager : MonoBehaviour {
 
 	public Stage[] stages;
-	int progress = 0;
+	int lastCompletedStage = -1;
 
 	static StorylineManager singleton;
 
@@ -20,18 +20,16 @@ public class StorylineManager : MonoBehaviour {
 		if (singleton == null) {
 			singleton = this;
 		}
-		PrepareStage();
 	}
 
 	public void AdvanceStory () {
-		Debug.Log("Advancing to stage " + progress + ".");
-		progress++;
+		lastCompletedStage++;
+		Debug.Log("Advancing to stage " + lastCompletedStage + ".");
 		PrepareStage();
 	}
 
-	public void PrepareStage() {
-		Stage stage = stages[progress];
+	void PrepareStage() {
+		Stage stage = stages[lastCompletedStage];
 		PuzzleController.Instance.SetUpPuzzle(stage.puzzle);
 	}
-
 }
