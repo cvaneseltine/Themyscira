@@ -51,6 +51,8 @@ public class PuzzleController : MonoBehaviour {
 		puzzle = nextPuzzle;
 		solution = puzzle.solution;
 
+		squares.Clear();
+
 		for (int i = 0; i < solution.wordStrings.Length; i++) {
 			PuzzleSquare square = Instantiate(squarePrefab).GetComponent<PuzzleSquare>();
 			squares.Add(square);
@@ -182,10 +184,12 @@ public class PuzzleController : MonoBehaviour {
 
 	public void TakeDownPuzzle () {
 		puzzleCanvas.gameObject.SetActive(false);
-		PuzzleSquare[] squares = attemptPanel.GetComponent<PuzzlePanel>().MySquaresInOrder.ToArray();
+		PuzzleSquare[] squares = attemptPanel.GetComponent<PuzzlePanel>().MySquaresInOrder;
 
 		for (int i = 0; i < squares.Length; i++) {
-			Destroy(squares[i]);
+			Debug.Log("Destroying " + squares[i].name + ".");
+			squares[i].transform.SetParent(null);
+			Destroy(squares[i].gameObject);
 		}
 	}
 }

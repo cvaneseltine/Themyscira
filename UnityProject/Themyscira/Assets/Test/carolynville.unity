@@ -197,8 +197,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beaconPosition: {x: 0, y: 0, z: 0}
   puzzle: {fileID: 274045863}
-  originalString: 'asdgfakjsdfqwe awera asdfasdfwer sdfasdfwer '
-  translatedRewardString: Dear human friend, hi!
+  originalString: Qrne sevraq uhzna, uryyb! V ubcr lbh trg guvf zrffntr. V nz Rryn
+    naq V nz rvtug lrnef byq. V rkcrpg lbh ner zhpu byqre ohg V ubcr jr jvyy or sevraqf
+    naljnl.
+  translatedRewardString: Dear friend human, hello! I hope you get this message. I
+    am Eela and I am eight years old. I expect you are much older but I hope we will
+    be friends anyway.
 --- !u!114 &274045863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,13 +227,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordStrings:
-  - dgf
-  - asfdsdf
-  - wersdf
+  - Qrne
+  - sevraq
+  - uhzna
   translationStrings:
-  - dear
-  - human
+  - Dear
   - friend
+  - human
 --- !u!4 &274045865
 Transform:
   m_ObjectHideFlags: 0
@@ -376,6 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81bb3e2837b6be04fa3e76c0a15bebd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squares: []
 --- !u!114 &487736522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,6 +416,186 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 487736519}
+--- !u!1 &531623334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 531623335}
+  - component: {fileID: 531623338}
+  - component: {fileID: 531623337}
+  - component: {fileID: 531623336}
+  m_Layer: 0
+  m_Name: Stage 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &531623335
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531623334}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 584975680}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &531623336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531623334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1e976c341f14f4f943463900e7bcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordStrings:
+  - Jr
+  - nyy
+  - unir
+  - gb
+  - tb
+  - abj
+  translationStrings:
+  - We
+  - all
+  - have
+  - to
+  - go
+  - now
+--- !u!114 &531623337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531623334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fd09311bdf8ea47b87f1b9d8ea6897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solution: {fileID: 531623336}
+--- !u!114 &531623338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531623334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566a73215ec633f4ea8d5fafbd1aadce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beaconPosition: {x: 0, y: 0, z: 0}
+  puzzle: {fileID: 531623337}
+  originalString: "Qrne sevraq uhzna, V jnagrq gb yrnir zber abgrf sbe lbh ohg V pna\\\u2019g
+    orpnhfr jr nyy unir gb tb abj. V ubcr lbh jvyy pbzr svaq hf. Jr pna gnyx nobhg
+    guvatf gung ner sha-fpnel naq vs gur ryqref qba\\\u2019g haqrefgnaq gung\\\u2019f
+    bxnl. Jr\\\u2019yy or sevraqf gbtrgure naljnl, evtug? V ernyyl ybbx sbejneq gb
+    zrrgvat lbh. Urer vf ubj lbh pna svaq zr. "
+  translatedRewardString: Dear friend human, I wanted to leave more notes for you
+    but I can't because we all have to go now. I hope you will come find us. We can
+    talk about things that are fun-scary and if the elders don't understand that's
+    okay. We'll be friends together anyway, right? I really look forward to meeting
+    you. Here is how you can find me.
+--- !u!1 &535175727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 535175728}
+  - component: {fileID: 535175731}
+  - component: {fileID: 535175730}
+  - component: {fileID: 535175729}
+  m_Layer: 0
+  m_Name: Stage 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &535175728
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 535175727}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 584975680}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &535175729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 535175727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1e976c341f14f4f943463900e7bcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordStrings:
+  - V
+  - ernyyl
+  - jnagrq
+  - gb
+  - zrrg
+  - lbh
+  translationStrings:
+  - I
+  - really
+  - wanted
+  - to
+  - meet
+  - you
+--- !u!114 &535175730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 535175727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fd09311bdf8ea47b87f1b9d8ea6897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solution: {fileID: 535175729}
+--- !u!114 &535175731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 535175727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566a73215ec633f4ea8d5fafbd1aadce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beaconPosition: {x: 0, y: 0, z: 0}
+  puzzle: {fileID: 535175730}
+  originalString: "Qrne sevraq uhzna, guvf vf Rryn ohg V thrff lbh xarj gung. V ernyyl
+    jnagrq gb zrrg lbh ohg zl perpurgraqre fnvq V pbhyqa\\\u2019g. Abar bs hf ner
+    fgnlvat gb zrrg lbh npghnyyl. Jr cvpxrq hc nyzbfg rirelguvat sebz gur cynarg.
+    V jvfu V pbhyq unir fgnlrq."
+  translatedRewardString: Dear friend human, this is Eela but I guess you knew that.
+    I really wanted to meet you but my crechetender said I couldn't. None of us are
+    staying to meet you actually. We picked up almost everything from the planet.
+    I wish I could have stayed.
 --- !u!1 &584975678
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +625,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stages:
   - {fileID: 274045862}
+  - {fileID: 1138675321}
+  - {fileID: 535175731}
+  - {fileID: 854026387}
+  - {fileID: 531623338}
   originalStringColor: {r: 0.18431373, g: 0.41176474, b: 0.7058824, a: 1}
   translatedStringColor: {r: 0.8431373, g: 0.72156864, b: 0.43529415, a: 1}
   rewardPanel: {fileID: 588395048}
@@ -456,6 +645,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 274045865}
+  - {fileID: 1138675318}
+  - {fileID: 535175728}
+  - {fileID: 854026384}
+  - {fileID: 531623335}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -637,6 +830,95 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &854026383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 854026384}
+  - component: {fileID: 854026387}
+  - component: {fileID: 854026386}
+  - component: {fileID: 854026385}
+  m_Layer: 0
+  m_Name: Stage 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &854026384
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 854026383}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 584975680}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &854026385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 854026383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1e976c341f14f4f943463900e7bcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordStrings:
+  - V
+  - guvax
+  - jr
+  - zvfhaqrefgnaq
+  - lbh
+  translationStrings:
+  - I
+  - think
+  - we
+  - misunderstand
+  - you
+--- !u!114 &854026386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 854026383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fd09311bdf8ea47b87f1b9d8ea6897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solution: {fileID: 854026385}
+--- !u!114 &854026387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 854026383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566a73215ec633f4ea8d5fafbd1aadce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beaconPosition: {x: 0, y: 0, z: 0}
+  puzzle: {fileID: 854026386}
+  originalString: "Qrne sevraq uhzna, V guvax jr zvfhaqrefgnaq lbh. Zl perpurgraqre
+    fnlf lbhe crbcyr ner irel qnatrebhf ohg V qba\\\u2019g ernyyl haqrefgnaq jung
+    fur zrnaf. V unir frra lbhe genafzvffvbaf naq fbzr bs gurz ner irel fpnel ohg
+    V guvax gur ryqref ner pbashfrq nobhg sha-fpnel naq erny-fpnel. V guvax sha-fpnel
+    vf sha, ohg V guvax gur ryqref guvax jr ner jrveq."
+  translatedRewardString: Dear friend human, I think we misunderstand you. My crechetender
+    says your people are very dangerous but I don't really understand what she means.
+    I have seen your transmissions and some of them are very scary but I think the
+    elders are confused about fun-scary and real-scary. I think fun-scary is fun,
+    but I think the elders think we are weird.
 --- !u!1 &1007941668
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,6 +1168,89 @@ SortingGroup:
   m_SortingLayerID: 1215240065
   m_SortingLayer: 1
   m_SortingOrder: 0
+--- !u!1 &1138675317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1138675318}
+  - component: {fileID: 1138675321}
+  - component: {fileID: 1138675320}
+  - component: {fileID: 1138675319}
+  m_Layer: 0
+  m_Name: Stage 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1138675318
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138675317}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 584975680}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1138675319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138675317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1e976c341f14f4f943463900e7bcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordStrings:
+  - "Vg\\\u2019f"
+  - Rryn
+  - ntnva
+  translationStrings:
+  - It's
+  - Eela
+  - again
+--- !u!114 &1138675320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138675317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fd09311bdf8ea47b87f1b9d8ea6897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solution: {fileID: 1138675319}
+--- !u!114 &1138675321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138675317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566a73215ec633f4ea8d5fafbd1aadce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beaconPosition: {x: 0, y: 0, z: 0}
+  puzzle: {fileID: 1138675320}
+  originalString: "Qrne sevraq uhzna, vg\\\u2019f Rryn ntnva. Ner lbh univat sha?
+    Bhe cynarg vf ernyyl cerggl V guvax. Vg\\\u2019f oebja yvxr lbh naq terra naq
+    checyr yvxr zr, bayl V thrff lbh zvtug abg or oebja? Lbh ybbx oebja va lbhe genafzvffvbaf
+    ohg V unir arire frra n erny uhzna lrg. "
+  translatedRewardString: Dear friend human, it's Eela again. Are you having fun?
+    Our planet is really pretty I think. It's brown like you and green and purple
+    like me, only I guess you might not be brown? You look brown in your transmissions
+    but I have never seen a real human yet.
 --- !u!1 &1353386544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,6 +1704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81bb3e2837b6be04fa3e76c0a15bebd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squares: []
 --- !u!114 &1798189371
 MonoBehaviour:
   m_ObjectHideFlags: 0
