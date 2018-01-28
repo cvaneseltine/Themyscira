@@ -46,7 +46,7 @@ public class PuzzleController : MonoBehaviour {
 	}
 
 	public void SetUpPuzzle (Puzzle nextPuzzle) {
-		puzzleCanvas.gameObject.SetActive(true);
+		InputManager.Instance.mode = InputManager.Mode.Puzzle;
 
 		puzzle = nextPuzzle;
 		solution = puzzle.solution;
@@ -70,13 +70,15 @@ public class PuzzleController : MonoBehaviour {
 
 		squares = Randomizer.RandomizeList(squares);
 
+		puzzleCanvas.gameObject.SetActive(true);
+
 		foreach (PuzzleSquare square in squares) {
 			square.transform.SetParent(puzzlePanel);
+			square.transform.position = new Vector3(square.transform.position.x + Random.Range(0f, 1f), square.transform.position.y, square.transform.position.z);
+			Debug.Log(square.name + " is now at " + square.transform.position + ".");
 		}
 
 		puzzlePanel.GetComponent<PuzzlePanel>().UpdateSquareHomes();
-
-		InputManager.Instance.mode = InputManager.Mode.Puzzle;
 	}
 
 	public void TestPuzzleSolution() {

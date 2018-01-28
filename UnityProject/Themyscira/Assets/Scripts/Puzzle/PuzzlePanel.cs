@@ -6,14 +6,6 @@ using System.Linq;
 
 public class PuzzlePanel : MonoBehaviour {
 
-	RectTransform rectangle {
-		get { return (RectTransform)transform;}
-	}
-
-	float width {
-		get { return rectangle.rect.width; }
-	}
-
 	public PuzzleSquare[] MySquaresInOrder {
 		get {
 			return GetComponentsInChildren<PuzzleSquare>().OrderBy(a => a.transform.position.x).ToArray<PuzzleSquare>();
@@ -23,16 +15,24 @@ public class PuzzlePanel : MonoBehaviour {
 	public void UpdateSquareHomes () {
 		float priorX = 0;
 
-		foreach (PuzzleSquare square in MySquaresInOrder) {
+		PuzzleSquare[] squares = MySquaresInOrder;
+
+		foreach (PuzzleSquare square in squares) {
 			priorX = square.transform.position.x;
 		}
 
-		float spacing = width / MySquaresInOrder.Length;
+		RectTransform rectangle = (RectTransform)transform;
+		float width = rectangle.rect.width;
+
+		float spacing = width / squares.Length;
+
+		Debug.Log("Spacing is " + spacing + ". Width is " + width + ". Squares length is " + squares.Length + ".");
 		
-		for (int i = 0; i < MySquaresInOrder.Length; i++) {
-			PuzzleSquare square = MySquaresInOrder[i];
+		for (int i = 0; i < squares.Length; i++) {
+			PuzzleSquare square = squares[i];
 			Vector3 home = new Vector3(rectangle.position.x - (width / 2) + (spacing / 2) + (spacing * i), rectangle.position.y, rectangle.position.z);
 			square.ChangeHome(home);
+			Debug.Log(square.name + " is now going home to " + square.home + ".");
 			square.GoHome();
 		}
 	}
