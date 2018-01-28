@@ -20,6 +20,8 @@ public class TerrainGenerator : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        // TODO: add player position to used positions so no overlap etc
+
         // radio towers
         // do these first because we want them far apart from each other
         for (int i = 0; i < numRadioTowersToSpawn; ++i)

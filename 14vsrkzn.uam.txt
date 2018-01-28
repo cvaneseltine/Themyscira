@@ -1,0 +1,61 @@
+﻿Merge remote-tracking branch 'origin/master'
+
+# Conflicts:
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 4 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   Art/Environment/radiotower.hxl
+#	new file:   Art/Radio Tower/tower_base.png
+#	new file:   Art/Radio Tower/tower_crop.pdn
+#	new file:   Art/Radio Tower/tower_crop.png
+#	new file:   Art/Radio Tower/tower_glow_active.png
+#	new file:   Art/Radio Tower/tower_glow_inactive.png
+#	new file:   Art/Radio Tower/tower_top.pdn
+#	new file:   Art/Radio Tower/tower_top.png
+#	new file:   UnityProject/Themyscira/Assets/Assets/Sprites/RadioTower.meta
+#	new file:   UnityProject/Themyscira/Assets/Assets/Sprites/RadioTower/tower_base.png
+#	new file:   UnityProject/Themyscira/Assets/Assets/Sprites/RadioTower/tower_base.png.meta
+#	new file:   UnityProject/Themyscira/Assets/Assets/Sprites/RadioTower/tower_glow_active.png
+#	new file:   UnityProject/Themyscira/Assets/Assets/Sprites/RadioTower/tower_glow_active.png.meta
+#	new file:   UnityProject/Themyscira/Assets/Assets/Sprites/RadioTower/tower_glow_inactive.png
+#	new file:   UnityProject/Themyscira/Assets/Assets/Sprites/RadioTower/tower_glow_inactive.png.meta
+#	new file:   UnityProject/Themyscira/Assets/Assets/Sprites/RadioTower/tower_top.png
+#	new file:   UnityProject/Themyscira/Assets/Assets/Sprites/RadioTower/tower_top.png.meta
+#	new file:   UnityProject/Themyscira/Assets/Prefabs/radioTower.prefab
+#	new file:   UnityProject/Themyscira/Assets/Prefabs/radioTower.prefab.meta
+#	modified:   UnityProject/Themyscira/Assets/Scripts/Environment/TerrainGenerator.cs
+#	modified:   UnityProject/Themyscira/Assets/Scripts/Movement/Hover.cs
+#	new file:   UnityProject/Themyscira/Assets/Scripts/RadioTowers.meta
+#	new file:   UnityProject/Themyscira/Assets/Scripts/RadioTowers/RadioTower.cs
+#	new file:   UnityProject/Themyscira/Assets/Scripts/RadioTowers/RadioTower.cs.meta
+#	new file:   UnityProject/Themyscira/Assets/Scripts/RadioTowers/TowerManager.cs
+#	new file:   UnityProject/Themyscira/Assets/Scripts/RadioTowers/TowerManager.cs.meta
+#	modified:   UnityProject/Themyscira/Assets/Test/sheilaland.unity
+#
+# Changes not staged for commit:
+#	modified:   UnityProject/Themyscira/Assets/Test/carolynville.unity
+#	modified:   UnityProject/Themyscira/Library/CurrentLayout.dwlt
+#	modified:   UnityProject/Themyscira/Library/metadata/00/00000000000000003000000000000000
+#
+# Untracked files:
+#	UnityProject/Themyscira/Assets/Assets.meta~HEAD
+#	UnityProject/Themyscira/Assets/Assets.meta~HEAD.meta
+#	UnityProject/Themyscira/Assets/Assets.meta~origin_master
+#	UnityProject/Themyscira/Assets/Assets.meta~origin_master.meta
+#	UnityProject/Themyscira/Assets/Prefabs.meta
+#
+
