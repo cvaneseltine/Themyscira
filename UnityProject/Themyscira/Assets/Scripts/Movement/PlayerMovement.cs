@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         // make sure we're allowed to move
         if (InputManager.Instance.mode != InputManager.Mode.Navigation)
         {

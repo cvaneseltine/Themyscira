@@ -25,6 +25,7 @@ public class InputManager : MonoBehaviour {
 		if (singleton == null) {
 			singleton = this;
 		}
+        mode = Mode.Navigation;
 	}
 
 	void Update () {
