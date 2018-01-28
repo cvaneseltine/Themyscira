@@ -172,8 +172,11 @@ MonoBehaviour:
     y: -10
     width: 30
     height: 20
+  numRadioTowersToSpawn: 2
+  minDistanceBetweenTowers: 10
   numSceneryBitsToSpawn: 8
   minDistanceBetweenBits: 3
+  radioTower: {fileID: 4486873570026400, guid: 1dcdb043278a7bc4c92cd1ba01fa1d88, type: 2}
   scenery:
   - {fileID: 4331757911085116, guid: 65ea3ba03af5cc04b935a398ddaa9b99, type: 2}
   - {fileID: 4403463041342180, guid: 93253da005448274a92c2846986d7124, type: 2}
