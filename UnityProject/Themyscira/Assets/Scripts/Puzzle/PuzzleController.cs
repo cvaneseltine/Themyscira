@@ -177,4 +177,13 @@ public class PuzzleController : MonoBehaviour {
 			MorphSquareToUnhappy(square);
 		}
 	}
+
+	public void TakeDownPuzzle () {
+		puzzleCanvas.gameObject.SetActive(false);
+		PuzzleSquare[] squares = attemptPanel.GetComponent<PuzzlePanel>().MySquaresInOrder.ToArray();
+
+		for (int i = 0; i < squares.Length; i++) {
+			Destroy(squares[i]);
+		}
+	}
 }

@@ -22,6 +22,7 @@ public class PuzzleSuccess : MonoBehaviour, IWannaKnowAboutLerping {
 		float turnaroundX = decodingStart.x + rectangle.rect.width;
 		decodingTurnaround = new Vector3(turnaroundX, decodingStart.y, decodingStart.z);
 		LerpingHorror.StartLerping(decodingBar, decodingTurnaround, this);
+		InputManager.Instance.mode = InputManager.Mode.Delay;
 	}
 
 	public void ReportLerpFinished (Lerper lerper) {
@@ -32,6 +33,8 @@ public class PuzzleSuccess : MonoBehaviour, IWannaKnowAboutLerping {
 			lerper.gameObject.SetActive(false);
 			gameObject.SetActive(false);
 			PuzzleController.Instance.TranslateSquares();
+			StorylineManager.Instance.RunStageReward();
 		}
+		InputManager.Instance.mode = InputManager.Mode.Menu;
 	}
 }

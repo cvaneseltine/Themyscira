@@ -5,6 +5,8 @@ using UnityEngine;
 public class InputManager : MonoBehaviour {
 
 	public enum Mode {
+		Delay,
+		Menu,
 		Navigation,
 		Puzzle
 	}
@@ -26,9 +28,15 @@ public class InputManager : MonoBehaviour {
 	}
 
 	void Update () {
-		if (mode == Mode.Navigation) {
+		if (mode == Mode.Delay) {
+			//Reject player input for the moment (it won't last)
+		}
+		else if (mode == Mode.Menu) {
+			//Use buttons and stuff
+		}
+		else if (mode == Mode.Navigation) {
 			// processing done in PlayerMovement::Update
-			}
+		}
 		else if (mode == Mode.Puzzle) {
 			//Do puzzle mechanics
 			PuzzleController.Instance.ProcessInput();

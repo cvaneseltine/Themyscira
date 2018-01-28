@@ -6,6 +6,6 @@ public class Stage : MonoBehaviour {
 	public Vector3 beaconPosition;
 	public Puzzle puzzle;
 
-	public string introString;
-	public string rewardString;
+	public string originalString;
+	public string translatedRewardString;
 }
