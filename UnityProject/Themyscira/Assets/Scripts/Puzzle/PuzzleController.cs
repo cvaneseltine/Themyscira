@@ -94,43 +94,59 @@ public class PuzzleController : MonoBehaviour {
 		}
 	}
 
-	public void PuzzleSquareHintCheck(List<PuzzleSquare> squares) {
-		Debug.Log("Starting puzzle square hint check.");
-		
-		if (squares.Count == 1) {
-			return;
-		}
+	public bool IsSquareHappyWithItsNeighbors (PuzzleSquare square) {
+		bool isLeftCorrect = false;
+		bool isRightCorrect = false;
+		PuzzleSquare[] squares = attemptPanel.GetComponent<PuzzlePanel>().MySquaresInOrder;
 
-		for (int i = 0; i < squares.Count; i++) {
-			PuzzleSquare square = squares[i];
-			bool isCorrectPosition = true;
+		//if (squares.Length == 1) {
+		//	Debug.Log(square.name + " has no neighbors and is therefore unhappy.");
+		//	return false; //Can't be happy alone.
+		//}
 
-			//Check the left and right neighbors.
-			if (i == 0 && square.leftSquareString != null) { //Leftmost square needs null left
-				isCorrectPosition = false;
-				}
-			else if (square.leftSquareString != squares[i - 1].myString) { //Doesn't match correct left neighbor
-				isCorrectPosition = false;
-				}
+		for (int i = 0; i < squares.Length; i++) {
+			//Find the correct square
+			if (squares[i] != square) {
+				continue; //keep looping
+			}
 
-			if (i == squares.Count - 1 && square.rightSquareString != null) { //Rightmost square needs null right
-				isCorrectPosition = false;
-				}
-			if (square.rightSquareString != squares[i + 1].myString) { //Doesn't match correct right neighbor
-				isCorrectPosition = false;
-				}
+			Debug.Log(square.name + "(#" + i + ") has the following requirements: a left neighbor who says '" + square.leftSquareString + "' and a right neighbor who says '" + square.rightSquareString + "'.");
 
-			if (isCorrectPosition) {
-				if (square.GetComponent<Image>().sprite != correctPlacementSprite) {
-					MorphingImageHorror.MorphImage(square.GetComponent<Image>(), correctPlacementSprite);
-				}
+			string compareLeft = "";
+			string compareRight = "";
+
+			if (i != 0) {
+				compareLeft = squares[i - 1].myString;
+			}
+			if (i != squares.Length - 1) {
+				compareRight = squares[i + 1].myString;
+			}
+
+			if (square.leftSquareString.Equals(compareLeft) || square.leftSquareString == compareLeft) {
+				Debug.Log("Left side: '" + compareLeft + "'. Happy on the left!");
+				isLeftCorrect = true;
 			}
 			else {
-				if (square.GetComponent<Image>().sprite != originalSprite) {
-					MorphingImageHorror.MorphImage(square.GetComponent<Image>(), originalSprite);
-				}
+				Debug.Log("Left side: '" + compareLeft + "'. Sad on the left.");
+				isLeftCorrect = false;
+			}
+
+			if (square.rightSquareString.Equals(compareRight) || square.rightSquareString == compareRight) {
+				Debug.Log("Right side: '" + compareRight + "'. Happy on the right!");
+				isRightCorrect = true;
+			}
+			else {
+				Debug.Log("Right side: '" + compareRight + "'. Sad on the right.");
+				isRightCorrect = false;
 			}
 		}
+		
+		if (isLeftCorrect && isRightCorrect) {
+			Debug.Log(square.name + " is a happy square!");
+			return true;
+		}
+		Debug.Log(square.name + " is not a happy square.");
+		return false;
 	}
 
 	public void TranslateSquares () {
@@ -146,5 +162,19 @@ public class PuzzleController : MonoBehaviour {
 		//Hooray, good job, make it splashy!
 		puzzleComplete = true;
 		successPanel.GetComponent<PuzzleSuccess>().Activate();
+	}
+
+	public void MorphSquareToHappy (PuzzleSquare square) {
+		MorphingImageHorror.MorphImage(square.GetComponent<Image>(), correctPlacementSprite);
+	}
+
+	public void MorphSquareToUnhappy (PuzzleSquare square) {
+		MorphingImageHorror.MorphImage(square.GetComponent<Image>(), originalSprite);
+	}
+
+	public void DarkenSquareIfUnhappy (PuzzleSquare square) {
+		if (square.transform.parent != attemptPanel) {
+			MorphSquareToUnhappy(square);
+		}
 	}
 }

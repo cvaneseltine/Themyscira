@@ -15,9 +15,9 @@ public class PuzzleSquare : MonoBehaviour {
 
 	public string translation;
 
-	public string leftSquareString; //What should be on the square to the left, in the correct position?
-	public string myString; //What text do I have?
-	public string rightSquareString; //What should be on the square to the right, in the correct position?
+	public string leftSquareString = ""; //What should be on the square to the left, in the correct position?
+	public string myString = ""; //What text do I have?
+	public string rightSquareString = ""; //What should be on the square to the right, in the correct position?
 
 	void Update () {
 		if (isFollowingMouse) {
@@ -28,6 +28,7 @@ public class PuzzleSquare : MonoBehaviour {
 			if (Mathf.Approximately (transform.position.x, home.x) && Mathf.Approximately(transform.position.y, home.y)) {
 				isGoingHome = false;
 				PuzzleController.Instance.TestPuzzleSolution();
+				PuzzleController.Instance.DarkenSquareIfUnhappy(this);
 				//Debug.Log(name + " here, and I have gotten to my new home. Did we win?");
 			}
 			else {  //If not, head in that direction.

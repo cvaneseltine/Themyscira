@@ -14,27 +14,23 @@ public class PuzzlePanel : MonoBehaviour {
 		get { return rectangle.rect.width; }
 	}
 
-	public void UpdateSquareHomes () {
-		List<PuzzleSquare> squares = new List<PuzzleSquare>();
-		
-		foreach (Transform child in transform) {
-			if (child.GetComponent<PuzzleSquare>() != null) {
-				squares.Add(child.GetComponent<PuzzleSquare>());
-			}
+	public PuzzleSquare[] MySquaresInOrder {
+		get {
+			return GetComponentsInChildren<PuzzleSquare>().OrderBy(a => a.transform.position.x).ToArray<PuzzleSquare>();
 		}
+	}
 
-		squares = squares.OrderBy(a => a.transform.position.x).ToList<PuzzleSquare>();
-
+	public void UpdateSquareHomes () {
 		float priorX = 0;
 
-		foreach (PuzzleSquare square in squares) {
+		foreach (PuzzleSquare square in MySquaresInOrder) {
 			priorX = square.transform.position.x;
 		}
 
-		float spacing = width / squares.Count;
+		float spacing = width / MySquaresInOrder.Length;
 		
-		for (int i = 0; i < squares.Count; i++) {
-			PuzzleSquare square = squares[i];
+		for (int i = 0; i < MySquaresInOrder.Length; i++) {
+			PuzzleSquare square = MySquaresInOrder[i];
 			Vector3 home = new Vector3(rectangle.position.x - (width / 2) + (spacing / 2) + (spacing * i), rectangle.position.y, rectangle.position.z);
 			square.ChangeHome(home);
 			square.GoHome();
@@ -42,37 +38,28 @@ public class PuzzlePanel : MonoBehaviour {
 	}
 
 	public bool TestPuzzleSolution (Solution solution) {
-		List<PuzzleSquare> squares = new List<PuzzleSquare>();
-		bool successful = true;
+		bool isCorrectSolution = true;
 
-		foreach (Transform child in transform) {
-			if (child.GetComponent<PuzzleSquare>() != null) {
-				squares.Add(child.GetComponent<PuzzleSquare>());
+		PuzzleSquare[] squares = MySquaresInOrder;
+
+		for (int i = 0; i < squares.Length; i++) {
+			if (PuzzleController.Instance.IsSquareHappyWithItsNeighbors(squares[i])) {
+				PuzzleController.Instance.MorphSquareToHappy(squares[i]);
+			}
+			else {
+				isCorrectSolution = false;
+				PuzzleController.Instance.MorphSquareToUnhappy(squares[i]);
 			}
 		}
 
-		squares = squares.OrderBy(a => a.transform.position.x).ToList<PuzzleSquare>();
-
-		if (squares.Count != solution.wordStrings.Length) {
-			successful = false;
-			//Debug.Log("Sorry, square, but your solution requires another arrangement. (" + squares.Count + " squares in place versus " + solution.wordStrings.Length + " needed)");
-		}
-		else {
-			for (int i = 0; i < solution.wordStrings.Length; i++) {
-				PuzzleSquare square = squares[i];
-
-				if (!square.GetComponentInChildren<Text>().text.Equals(solution.wordStrings[i])) {
-					//Debug.Log("Sorry, square, but your solution requires another arrangement. (" + square.GetComponentInChildren<Text>().text + " does not match " + solution.wordStrings[i] + " needed)");
-					successful = false;
-				}
-			}
+		if (squares.Length != solution.wordStrings.Length) {
+			isCorrectSolution = false;
 		}
 
-		if (successful) {
+		if (isCorrectSolution) {
 			Debug.Log("CONGRATULATIONS! You have solved the puzzle!");
 			return true;
 		}
-		PuzzleController.Instance.PuzzleSquareHintCheck(squares);
 		return false;
 	}
 }

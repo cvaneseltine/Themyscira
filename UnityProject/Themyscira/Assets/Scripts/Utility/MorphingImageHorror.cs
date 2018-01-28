@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public static class MorphingImageHorror {
 
 	public static void MorphImage (Image original, Sprite newSprite) {
+		if (original.GetComponent<Image>().sprite == newSprite) {
+			return;
+		}
+
 		GameObject morpher = GameObject.Instantiate(original.gameObject);
 		morpher.name = (original.gameObject.name + " imageMorpher");
 		morpher.transform.SetParent(original.transform);
