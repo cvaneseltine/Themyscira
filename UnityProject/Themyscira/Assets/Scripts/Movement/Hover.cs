@@ -20,7 +20,7 @@ public class Hover : MonoBehaviour {
 
         float radians = 2 * Mathf.PI * timer / hoverPeriod;
         float hover = hoverAmplitude * Mathf.Sin(radians);
-        Debug.Log(hover);
+        //Debug.Log(hover);
         gameObject.transform.localPosition = new Vector3(0, hover, 0);
 	}
 }
