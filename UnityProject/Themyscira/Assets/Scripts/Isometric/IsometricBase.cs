@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
 public abstract class IsometricBase : MonoBehaviour {
 
     public float floorHeight = 0;
+
+    public SpriteRenderer spriteRenderer;
 
     Sprite sprite;
 
@@ -14,8 +15,15 @@ public abstract class IsometricBase : MonoBehaviour {
     private void Init()
     {
         if (sprite)
+        {
             return;
-        sprite = GetComponent<SpriteRenderer>().sprite;
+        }
+
+        if (!spriteRenderer)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+        sprite = spriteRenderer.sprite;
     }
 
     // Use this for initialization
@@ -42,6 +50,10 @@ public abstract class IsometricBase : MonoBehaviour {
     void OnDrawGizmos()
     {
         Init();
+        if (!sprite)
+        {
+            return;
+        }
         // draw line to denote floor
         Gizmos.color = Color.cyan;
         float lineY = GetFloor();

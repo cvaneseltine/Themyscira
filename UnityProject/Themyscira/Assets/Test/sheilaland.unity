@@ -173,6 +173,7 @@ MonoBehaviour:
     width: 30
     height: 20
   numSceneryBitsToSpawn: 8
+  minDistanceBetweenBits: 3
   scenery:
   - {fileID: 4331757911085116, guid: 65ea3ba03af5cc04b935a398ddaa9b99, type: 2}
   - {fileID: 4403463041342180, guid: 93253da005448274a92c2846986d7124, type: 2}
@@ -683,6 +684,7 @@ GameObject:
   - component: {fileID: 1941735497}
   - component: {fileID: 1941735496}
   - component: {fileID: 1941735499}
+  - component: {fileID: 1941735500}
   m_Layer: 0
   m_Name: francisContainer
   m_TagString: Untagged
@@ -784,6 +786,19 @@ SpringJoint2D:
   m_Distance: 2.4713998
   m_DampingRatio: 1
   m_Frequency: 1
+--- !u!114 &1941735500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1941735494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12ab889eb962fb4d891b0e205f68908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorHeight: -2
+  spriteRenderer: {fileID: 1973502243}
 --- !u!1 &1973502242
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +808,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1973502244}
   - component: {fileID: 1973502243}
-  - component: {fileID: 1973502245}
   - component: {fileID: 1973502246}
   m_Layer: 0
   m_Name: francis
@@ -859,18 +873,6 @@ Transform:
   m_Father: {fileID: 1941735495}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1973502245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1973502242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12ab889eb962fb4d891b0e205f68908, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floorHeight: -1.9
 --- !u!114 &1973502246
 MonoBehaviour:
   m_ObjectHideFlags: 0

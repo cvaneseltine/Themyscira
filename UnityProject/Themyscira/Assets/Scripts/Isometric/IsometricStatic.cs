@@ -8,4 +8,9 @@ public class IsometricStatic : IsometricBase
     {
         SetZ();
     }
+
+    private void OnBeforeTransformParentChanged()
+    {
+       // SetZ();
+    }
 }
