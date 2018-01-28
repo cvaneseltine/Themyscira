@@ -31,7 +31,7 @@ public class InputManager : MonoBehaviour {
 			}
 		else if (mode == Mode.Puzzle) {
 			//Do puzzle mechanics
-			PuzzleCanvas.Instance.ProcessInput();
+			PuzzleController.Instance.ProcessInput();
 		}
 	}
 }

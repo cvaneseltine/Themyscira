@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222546393934067606}
   - component: {fileID: 114963416035474278}
   - component: {fileID: 114495234277301474}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Puzzle Square prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 224923686718011882}
   - component: {fileID: 222692301749462048}
   - component: {fileID: 114893893291314946}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,6 +57,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b3c6753689b94cb5bb0ffd2412f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  home: {x: 0, y: 0, z: 0}
+  isFollowingMouse: 0
+  isGoingHome: 0
+  translation: 
 --- !u!114 &114893893291314946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,7 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.1254902, g: 0.050980397, b: 0.24705884, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -109,7 +113,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5b57c5022893cfb419558c5b26393d86, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -146,7 +150,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 97.68, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224923686718011882
 RectTransform:
@@ -161,8 +165,8 @@ RectTransform:
   m_Father: {fileID: 224164178185754146}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.19859111, y: 0}
+  m_AnchorMax: {x: 0.8422589, y: 1}
+  m_AnchoredPosition: {x: 0.0000076293945, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

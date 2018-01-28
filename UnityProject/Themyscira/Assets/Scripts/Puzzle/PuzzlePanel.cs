@@ -6,12 +6,12 @@ using System.Linq;
 
 public class PuzzlePanel : MonoBehaviour {
 
-	RectTransform rectangle;
-	float width;
+	RectTransform rectangle {
+		get { return (RectTransform)transform;}
+	}
 
-	void Start() {
-		rectangle = (RectTransform)transform;
-		width = rectangle.rect.width;
+	float width {
+		get { return rectangle.rect.width; }
 	}
 
 	public void UpdateSquareHomes () {
@@ -43,6 +43,7 @@ public class PuzzlePanel : MonoBehaviour {
 
 	public bool TestPuzzleSolution (Solution solution) {
 		List<PuzzleSquare> squares = new List<PuzzleSquare>();
+		bool successful = true;
 
 		foreach (Transform child in transform) {
 			if (child.GetComponent<PuzzleSquare>() != null) {
@@ -50,22 +51,28 @@ public class PuzzlePanel : MonoBehaviour {
 			}
 		}
 
-		if (squares.Count != solution.wordStrings.Length) {
-			//Debug.Log("Sorry, square, but your solution requires another arrangement. (" + squares.Count + " squares in place versus " + solution.wordStrings.Length + " needed)");
-			return false;
-		}
-
 		squares = squares.OrderBy(a => a.transform.position.x).ToList<PuzzleSquare>();
 
-		for (int i = 0; i < solution.wordStrings.Length; i++) {
-			PuzzleSquare square = squares[i];
+		if (squares.Count != solution.wordStrings.Length) {
+			successful = false;
+			//Debug.Log("Sorry, square, but your solution requires another arrangement. (" + squares.Count + " squares in place versus " + solution.wordStrings.Length + " needed)");
+		}
+		else {
+			for (int i = 0; i < solution.wordStrings.Length; i++) {
+				PuzzleSquare square = squares[i];
 
-			if (!square.GetComponentInChildren<Text>().text.Equals(solution.wordStrings[i])) {
-				//Debug.Log("Sorry, square, but your solution requires another arrangement. (" + square.GetComponentInChildren<Text>().text + " does not match " + solution.wordStrings[i] + " needed)");
-				return false;
+				if (!square.GetComponentInChildren<Text>().text.Equals(solution.wordStrings[i])) {
+					//Debug.Log("Sorry, square, but your solution requires another arrangement. (" + square.GetComponentInChildren<Text>().text + " does not match " + solution.wordStrings[i] + " needed)");
+					successful = false;
+				}
 			}
 		}
-		Debug.Log("CONGRATULATIONS! You have solved the puzzle!");
-		return true;
+
+		if (successful) {
+			Debug.Log("CONGRATULATIONS! You have solved the puzzle!");
+			return true;
+		}
+		PuzzleController.Instance.PuzzleSquareHintCheck(squares);
+		return false;
 	}
 }

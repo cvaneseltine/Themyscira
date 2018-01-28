@@ -14,7 +14,11 @@ public class PuzzleSquare : MonoBehaviour {
 	public bool isGoingHome = false;
 
 	public string translation;
-	
+
+	public string leftSquareString; //What should be on the square to the left, in the correct position?
+	public string myString; //What text do I have?
+	public string rightSquareString; //What should be on the square to the right, in the correct position?
+
 	void Update () {
 		if (isFollowingMouse) {
 			transform.position = Input.mousePosition;
