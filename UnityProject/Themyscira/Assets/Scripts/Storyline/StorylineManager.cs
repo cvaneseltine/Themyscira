@@ -15,6 +15,8 @@ public class StorylineManager : MonoBehaviour {
 	public Text rewardText;
 	public Button continueButton;
 
+	public RectTransform endGamePanel;
+
 	int lastCompletedStage = -1;
 
 	static StorylineManager singleton;
@@ -59,5 +61,10 @@ public class StorylineManager : MonoBehaviour {
 		continueButton.gameObject.SetActive(false);
 		PuzzleController.Instance.TakeDownPuzzle();
 		InputManager.Instance.mode = InputManager.Mode.Navigation;
+		if (lastCompletedStage == stages.Length - 1) {
+			PuzzleCanvas.Instance.gameObject.SetActive(true);
+			endGamePanel.gameObject.SetActive(true);
+			InputManager.Instance.mode = InputManager.Mode.Menu;
+		}
 	}
 }

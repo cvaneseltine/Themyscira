@@ -1,0 +1,502 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1771186666331224}
+  m_IsPrefabParent: 1
+--- !u!1 &1140021038319068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4663725253750394}
+  - component: {fileID: 114207695418288504}
+  - component: {fileID: 114055179190677914}
+  - component: {fileID: 114277072761011026}
+  m_Layer: 0
+  m_Name: Stage 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1305739083826850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4442275704607388}
+  - component: {fileID: 114791622486516758}
+  - component: {fileID: 114329585876444428}
+  - component: {fileID: 114359665015042284}
+  m_Layer: 0
+  m_Name: Stage 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1347946959205772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4538158577481080}
+  - component: {fileID: 114184997346954490}
+  - component: {fileID: 114976655157976294}
+  - component: {fileID: 114728853500502036}
+  m_Layer: 0
+  m_Name: Stage 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1414408228837664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4430596556382498}
+  - component: {fileID: 114736831610534024}
+  - component: {fileID: 114092146355665250}
+  - component: {fileID: 114887678545254402}
+  m_Layer: 0
+  m_Name: Stage 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1458845744506718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4003280957103612}
+  - component: {fileID: 114040642290445682}
+  - component: {fileID: 114938382607531584}
+  - component: {fileID: 114042874679052618}
+  m_Layer: 0
+  m_Name: Stage 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1771186666331224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4313320399380250}
+  - component: {fileID: 114665696345294494}
+  m_Layer: 0
+  m_Name: StorylineManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4003280957103612
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458845744506718}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4313320399380250}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4313320399380250
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1771186666331224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 927.53217, y: -61.07904, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4663725253750394}
+  - {fileID: 4442275704607388}
+  - {fileID: 4538158577481080}
+  - {fileID: 4003280957103612}
+  - {fileID: 4430596556382498}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4430596556382498
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414408228837664}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4313320399380250}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4442275704607388
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305739083826850}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4313320399380250}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4538158577481080
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1347946959205772}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4313320399380250}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4663725253750394
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1140021038319068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4313320399380250}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114040642290445682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458845744506718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566a73215ec633f4ea8d5fafbd1aadce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beaconPosition: {x: 0, y: 0, z: 0}
+  puzzle: {fileID: 114938382607531584}
+  originalString: "Qrne sevraq uhzna, V guvax jr zvfhaqrefgnaq lbh. Zl perpurgraqre
+    fnlf lbhe crbcyr ner irel qnatrebhf ohg V qba\\\u2019g ernyyl haqrefgnaq jung
+    fur zrnaf. V unir frra lbhe genafzvffvbaf naq fbzr bs gurz ner irel fpnel ohg
+    V guvax gur ryqref ner pbashfrq nobhg sha-fpnel naq erny-fpnel. V guvax sha-fpnel
+    vf sha, ohg V guvax gur ryqref guvax jr ner jrveq."
+  translatedRewardString: Dear friend human, I think we misunderstand you. My crechetender
+    says your people are very dangerous but I don't really understand what she means.
+    I have seen your transmissions and some of them are very scary but I think the
+    elders are confused about fun-scary and real-scary. I think fun-scary is fun,
+    but I think the elders think we are weird.
+--- !u!114 &114042874679052618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458845744506718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1e976c341f14f4f943463900e7bcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordStrings:
+  - V
+  - guvax
+  - jr
+  - zvfhaqrefgnaq
+  - lbh
+  translationStrings:
+  - I
+  - think
+  - we
+  - misunderstand
+  - you
+--- !u!114 &114055179190677914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1140021038319068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fd09311bdf8ea47b87f1b9d8ea6897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solution: {fileID: 114277072761011026}
+--- !u!114 &114092146355665250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414408228837664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fd09311bdf8ea47b87f1b9d8ea6897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solution: {fileID: 114887678545254402}
+--- !u!114 &114184997346954490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1347946959205772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566a73215ec633f4ea8d5fafbd1aadce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beaconPosition: {x: 0, y: 0, z: 0}
+  puzzle: {fileID: 114976655157976294}
+  originalString: "Qrne sevraq uhzna, guvf vf Rryn ohg V thrff lbh xarj gung. V ernyyl
+    jnagrq gb zrrg lbh ohg zl perpurgraqre fnvq V pbhyqa\\\u2019g. Abar bs hf ner
+    fgnlvat gb zrrg lbh npghnyyl. Jr cvpxrq hc nyzbfg rirelguvat sebz gur cynarg.
+    V jvfu V pbhyq unir fgnlrq."
+  translatedRewardString: Dear friend human, this is Eela but I guess you knew that.
+    I really wanted to meet you but my crechetender said I couldn't. None of us are
+    staying to meet you actually. We picked up almost everything from the planet.
+    I wish I could have stayed.
+--- !u!114 &114207695418288504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1140021038319068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566a73215ec633f4ea8d5fafbd1aadce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beaconPosition: {x: 0, y: 0, z: 0}
+  puzzle: {fileID: 114055179190677914}
+  originalString: Qrne sevraq uhzna, uryyb! V ubcr lbh trg guvf zrffntr. V nz Rryn
+    naq V nz rvtug lrnef byq. V rkcrpg lbh ner zhpu byqre ohg V ubcr jr jvyy or sevraqf
+    naljnl.
+  translatedRewardString: Dear friend human, hello! I hope you get this message. I
+    am Eela and I am eight years old. I expect you are much older but I hope we will
+    be friends anyway.
+--- !u!114 &114277072761011026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1140021038319068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1e976c341f14f4f943463900e7bcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordStrings:
+  - Qrne
+  - sevraq
+  - uhzna
+  translationStrings:
+  - Dear
+  - friend
+  - human
+--- !u!114 &114329585876444428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305739083826850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fd09311bdf8ea47b87f1b9d8ea6897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solution: {fileID: 114359665015042284}
+--- !u!114 &114359665015042284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305739083826850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1e976c341f14f4f943463900e7bcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordStrings:
+  - "Vg\\\u2019f"
+  - Rryn
+  - ntnva
+  translationStrings:
+  - It's
+  - Eela
+  - again
+--- !u!114 &114665696345294494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1771186666331224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9cf24a62af1f4488baa8bb9500f31f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stages:
+  - {fileID: 114207695418288504}
+  - {fileID: 114791622486516758}
+  - {fileID: 114184997346954490}
+  - {fileID: 114040642290445682}
+  - {fileID: 114736831610534024}
+  originalStringColor: {r: 0.18431373, g: 0.41176474, b: 0.7058824, a: 1}
+  translatedStringColor: {r: 0.8431373, g: 0.72156864, b: 0.43529415, a: 1}
+  rewardPanel: {fileID: 0}
+  rewardText: {fileID: 0}
+  continueButton: {fileID: 0}
+--- !u!114 &114728853500502036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1347946959205772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1e976c341f14f4f943463900e7bcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordStrings:
+  - V
+  - ernyyl
+  - jnagrq
+  - gb
+  - zrrg
+  - lbh
+  translationStrings:
+  - I
+  - really
+  - wanted
+  - to
+  - meet
+  - you
+--- !u!114 &114736831610534024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414408228837664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566a73215ec633f4ea8d5fafbd1aadce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beaconPosition: {x: 0, y: 0, z: 0}
+  puzzle: {fileID: 114092146355665250}
+  originalString: "Qrne sevraq uhzna, V jnagrq gb yrnir zber abgrf sbe lbh ohg V pna\\\u2019g
+    orpnhfr jr nyy unir gb tb abj. V ubcr lbh jvyy pbzr svaq hf. Jr pna gnyx nobhg
+    guvatf gung ner sha-fpnel naq vs gur ryqref qba\\\u2019g haqrefgnaq gung\\\u2019f
+    bxnl. Jr\\\u2019yy or sevraqf gbtrgure naljnl, evtug? V ernyyl ybbx sbejneq gb
+    zrrgvat lbh. Urer vf ubj lbh pna svaq zr. "
+  translatedRewardString: Dear friend human, I wanted to leave more notes for you
+    but I can't because we all have to go now. I hope you will come find us. We can
+    talk about things that are fun-scary and if the elders don't understand that's
+    okay. We'll be friends together anyway, right? I really look forward to meeting
+    you. Here is how you can find me.
+--- !u!114 &114791622486516758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305739083826850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566a73215ec633f4ea8d5fafbd1aadce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beaconPosition: {x: 0, y: 0, z: 0}
+  puzzle: {fileID: 114329585876444428}
+  originalString: "Qrne sevraq uhzna, vg\\\u2019f Rryn ntnva. Ner lbh univat sha?
+    Bhe cynarg vf ernyyl cerggl V guvax. Vg\\\u2019f oebja yvxr lbh naq terra naq
+    checyr yvxr zr, bayl V thrff lbh zvtug abg or oebja? Lbh ybbx oebja va lbhe genafzvffvbaf
+    ohg V unir arire frra n erny uhzna lrg. "
+  translatedRewardString: Dear friend human, it's Eela again. Are you having fun?
+    Our planet is really pretty I think. It's brown like you and green and purple
+    like me, only I guess you might not be brown? You look brown in your transmissions
+    but I have never seen a real human yet.
+--- !u!114 &114887678545254402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414408228837664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1e976c341f14f4f943463900e7bcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordStrings:
+  - Jr
+  - nyy
+  - unir
+  - gb
+  - tb
+  - abj
+  translationStrings:
+  - We
+  - all
+  - have
+  - to
+  - go
+  - now
+--- !u!114 &114938382607531584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458845744506718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fd09311bdf8ea47b87f1b9d8ea6897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solution: {fileID: 114042874679052618}
+--- !u!114 &114976655157976294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1347946959205772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fd09311bdf8ea47b87f1b9d8ea6897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solution: {fileID: 114728853500502036}

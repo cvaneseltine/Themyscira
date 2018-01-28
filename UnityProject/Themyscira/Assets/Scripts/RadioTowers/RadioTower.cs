@@ -36,7 +36,7 @@ public class RadioTower : MonoBehaviour {
     {
         if (state == State.Broadcasting)
         {
-            // TODO: launch puzzle here, then call this after it's solved
+			StorylineManager.Instance.AdvanceStory();
             TowerManager.Instance.FinishCurrentTower();
         }
     }

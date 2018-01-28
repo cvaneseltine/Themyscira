@@ -13,6 +13,7 @@ public class PuzzleSuccess : MonoBehaviour, IWannaKnowAboutLerping {
 
 	public void Activate () {
 		gameObject.SetActive(true);
+		decodingBar.gameObject.SetActive(true);
 		rectangle = (RectTransform)transform;
 		ActivateDecodingBar();
 	}

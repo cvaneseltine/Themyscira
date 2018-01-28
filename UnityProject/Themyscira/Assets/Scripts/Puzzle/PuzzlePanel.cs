@@ -13,13 +13,16 @@ public class PuzzlePanel : MonoBehaviour {
 	}
 
 	public void UpdateSquareHomes () {
-		float priorX = 0;
-
 		PuzzleSquare[] squares = MySquaresInOrder;
 
-		foreach (PuzzleSquare square in squares) {
-			priorX = square.transform.position.x;
+		if (squares.Length == 0) {
+			Debug.Log(name + " is not updating its squares' homes because it has no squares to update.");
 		}
+
+		//foreach (PuzzleSquare square in squares) {
+		//	square.transform.localScale = Vector3.one;
+		//	square.transform.position = Vector3.zero;
+		//}
 
 		RectTransform rectangle = (RectTransform)transform;
 		float width = rectangle.rect.width;

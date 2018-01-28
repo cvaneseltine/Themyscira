@@ -50,6 +50,7 @@ public class PuzzleController : MonoBehaviour {
 
 		puzzle = nextPuzzle;
 		solution = puzzle.solution;
+		puzzleComplete = false;
 
 		squares.Clear();
 
@@ -76,7 +77,7 @@ public class PuzzleController : MonoBehaviour {
 
 		foreach (PuzzleSquare square in squares) {
 			square.transform.SetParent(puzzlePanel);
-			square.transform.position = new Vector3(square.transform.position.x + Random.Range(0f, 1f), square.transform.position.y, square.transform.position.z);
+			square.transform.position = new Vector3(puzzlePanel.transform.position.x + Random.Range(0f, 1f), puzzlePanel.transform.position.y, puzzlePanel.transform.position.z);
 			Debug.Log(square.name + " is now at " + square.transform.position + ".");
 		}
 
@@ -183,7 +184,6 @@ public class PuzzleController : MonoBehaviour {
 	}
 
 	public void TakeDownPuzzle () {
-		puzzleCanvas.gameObject.SetActive(false);
 		PuzzleSquare[] squares = attemptPanel.GetComponent<PuzzlePanel>().MySquaresInOrder;
 
 		for (int i = 0; i < squares.Length; i++) {
@@ -191,5 +191,6 @@ public class PuzzleController : MonoBehaviour {
 			squares[i].transform.SetParent(null);
 			Destroy(squares[i].gameObject);
 		}
+		puzzleCanvas.gameObject.SetActive(false);
 	}
 }

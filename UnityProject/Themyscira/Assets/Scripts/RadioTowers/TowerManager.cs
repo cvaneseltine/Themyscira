@@ -48,6 +48,7 @@ public class TowerManager : MonoBehaviour {
     public void FinishCurrentTower()
     {
         towers[currentTowerIndex].SetState(RadioTower.State.Solved);
+		Debug.Log("Tower #" + currentTowerIndex + " at " + towers[currentTowerIndex].transform.position + " is complete!");
         if (currentTowerIndex >= towers.Count - 1)
         {
             // GAME DONE, YOU WIN
@@ -56,5 +57,6 @@ public class TowerManager : MonoBehaviour {
 
         ++currentTowerIndex;
         towers[currentTowerIndex].SetState(RadioTower.State.Broadcasting);
-    }
+		Debug.Log("Tower #" + currentTowerIndex + " is now broadcasting. Location: " + towers[currentTowerIndex].transform.position);
+		}
 }

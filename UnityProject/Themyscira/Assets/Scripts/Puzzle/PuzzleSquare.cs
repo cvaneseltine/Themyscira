@@ -29,7 +29,7 @@ public class PuzzleSquare : MonoBehaviour {
 				isGoingHome = false;
 				PuzzleController.Instance.TestPuzzleSolution();
 				PuzzleController.Instance.DarkenSquareIfUnhappy(this);
-				//Debug.Log(name + " here, and I have gotten to my new home. Did we win?");
+				Debug.Log(name + " here, and I have gotten to my new home. Did we win?");
 			}
 			else {  //If not, head in that direction.
 					//increment timer once per frame
