@@ -260,7 +260,7 @@ MonoBehaviour:
     width: 450
     height: 225
   numRadioTowersToSpawn: 5
-  minDistanceBetweenTowers: 100
+  minDistanceBetweenTowers: 150
   numSceneryBitsToSpawn: 100
   minDistanceBetweenBits: 10
   radioTower: {fileID: 4486873570026400, guid: 1dcdb043278a7bc4c92cd1ba01fa1d88, type: 2}
@@ -380,6 +380,30 @@ Prefab:
     - target: {fileID: 4349680395966008, guid: c842e253319c55d4886c75aba00e68a8, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114341414052747598, guid: c842e253319c55d4886c75aba00e68a8,
+        type: 2}
+      propertyPath: movementForce
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 20585679332480718, guid: c842e253319c55d4886c75aba00e68a8,
+        type: 2}
+      propertyPath: orthographic size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114672398308178342, guid: c842e253319c55d4886c75aba00e68a8,
+        type: 2}
+      propertyPath: floorHeight
+      value: -1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 20585679332480718, guid: c842e253319c55d4886c75aba00e68a8,
+        type: 2}
+      propertyPath: m_OcclusionCulling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736257938906988, guid: c842e253319c55d4886c75aba00e68a8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -69.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c842e253319c55d4886c75aba00e68a8, type: 2}
